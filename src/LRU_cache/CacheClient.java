@@ -2,7 +2,7 @@ package LRU_cache;
 
 public class CacheClient {
 
-	public void main(String[] args){
+	public static void main(String[] args){
 		LRUcache cache = new LRUcache(10);
 		TextFileStrategy dataFile = new TextFileStrategy("./src/LRU_cache/FileTest_01.txt");
 
@@ -13,7 +13,9 @@ public class CacheClient {
 		cache.set(myKey, myValue);
 
 		System.out.println("printing from cache...");
+		System.out.println("get hit ratio: " + cache.getHitRatio());
 		System.out.println(cache.get(myKey));
+		System.out.println("get hit ratio: " + cache.getHitRatio());
 
 	}
 

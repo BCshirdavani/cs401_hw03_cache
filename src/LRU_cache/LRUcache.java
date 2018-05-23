@@ -7,30 +7,44 @@ public class LRUcache {
 	HashMap<Integer, Node> map = new HashMap<Integer, Node>();
 	Node head=null;
 	Node end=null;
-	// TODO: add hit ratio for cache
-	// TODO: add miss ratio for cache
+	int countTotalGetCalls;
+	int countMiss;
+	int countHit;
+
 	// TODO: make clear method to clear the cache
 
 	//	constructor with custom capacity
 	public LRUcache(int capacity) {
 		this.capacity = capacity;
+		this.countHit = 0;
+		this.countMiss = 0;
+		this.countTotalGetCalls = 0;
 	}
 
 	//	constructor with capacity of 10
 	public LRUcache() {
 		this.capacity = 10;
+		this.countHit = 0;
+		this.countMiss = 0;
+		this.countTotalGetCalls = 0;
 	}
 
 	// TODO: make "contains" method for cache, which is like "get", but a boolean
 	//	RETURN the OBJECT value
 	public Object get(int key) {
+		countTotalGetCalls++;		//	increment countTotalGetCalls
 		if(map.containsKey(key)){	//	if found, return object value in node
 			Node n = map.get(key);
 			remove(n);
 			setHead(n);
+			countHit++;				//	increment countHit
 			return n.value;
 		}
-		return -1;					//	if not found, return -1
+		else{
+			countMiss++;			//	increment countMiss
+			return -1;				//	if not found, return -1
+			//TODO: cacheMiss -> search data source for key:value, and add to cache
+		}
 	}
 
 	//	DELETE a node
@@ -78,6 +92,15 @@ public class LRUcache {
 			}
 			map.put(key, created);						//	add this new key,val to the map
 		}
+	}
+
+
+	public Float getHitRatio(){
+		return ((float)countHit / (float)countTotalGetCalls);
+	}
+
+	public Float getMissRatio(){
+		return ((float)countMiss / (float)countTotalGetCalls);
 	}
 
 

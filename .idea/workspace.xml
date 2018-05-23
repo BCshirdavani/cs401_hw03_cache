@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97f6c39c-dd36-4504-928a-b1d8a2d6ba8e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LRU_cache/CacheClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LRU_cache/CacheClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LRU_cache/FileTest_01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/LRU_cache/FileTest_01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LRU_cache/TextFileStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LRU_cache/TextFileStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LRU_cache/LRUcache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LRU_cache/LRUcache.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +21,8 @@
           <file leaf-file-name="CacheClient.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/LRU_cache/CacheClient.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="260">
-                  <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+                <state relative-caret-position="286">
+                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
                 </state>
               </provider>
             </entry>
@@ -30,14 +30,14 @@
           <file leaf-file-name="LRUcache.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/LRU_cache/LRUcache.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="760">
-                  <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+                <state relative-caret-position="533">
+                  <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
                   <folding>
                     <element signature="e#101#116#0" expanded="true" />
-                    <element signature="e#211#212#0" expanded="true" />
-                    <element signature="e#242#243#0" expanded="true" />
-                    <element signature="e#349#350#0" expanded="true" />
-                    <element signature="e#380#381#0" expanded="true" />
+                    <element signature="e#2657#2658#0" expanded="true" />
+                    <element signature="e#2679#2680#0" expanded="true" />
+                    <element signature="e#2782#2783#0" expanded="true" />
+                    <element signature="e#2841#2842#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -47,16 +47,16 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/LRU_cache/Node.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="156">
-                  <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+                  <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="GetDataStrategy.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="GetDataStrategy.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/LRU_cache/GetDataStrategy.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="65">
@@ -69,7 +69,7 @@
             <entry file="file://$PROJECT_DIR$/src/LRU_cache/TextFileStrategy.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="234">
-                  <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+                  <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -81,7 +81,7 @@
             <entry file="file://$PROJECT_DIR$/src/LRU_cache/FileTest_01.txt">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="117">
-                  <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+                  <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -101,8 +101,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>contains</find>
-      <find>get</find>
       <find>get(O</find>
+      <find>get</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,13 +112,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/LRU_cache/Node.java" />
-        <option value="$PROJECT_DIR$/src/LRU_cache/LRUcache.java" />
         <option value="$PROJECT_DIR$/src/LRU_cache/DataForCache.java" />
         <option value="$PROJECT_DIR$/src/LRU_cache/FileTest.txt" />
         <option value="$PROJECT_DIR$/src/LRU_cache/GetDataStrategy.java" />
         <option value="$PROJECT_DIR$/src/LRU_cache/TextFileStrategy.java" />
         <option value="$PROJECT_DIR$/src/LRU_cache/FileTest_01.txt" />
         <option value="$PROJECT_DIR$/src/LRU_cache/CacheClient.java" />
+        <option value="$PROJECT_DIR$/src/LRU_cache/LRUcache.java" />
       </list>
     </option>
   </component>
@@ -205,6 +205,17 @@
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
+    <configuration name="CacheClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LRU_cache.CacheClient" />
+      <module name="cs401_hw03_cache" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LRU_cache.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -261,6 +272,11 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CacheClient" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -289,18 +305,19 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32919955" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32919955" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" weight="0.32961586" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24351747" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122057" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.122057" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2496902" />
@@ -363,6 +380,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LRU_cache/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LRU_cache/FileTest_01.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LRU_cache/TextFileStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LRU_cache/GetDataStrategy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
@@ -370,48 +411,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LRU_cache/TextFileStrategy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LRU_cache/FileTest_01.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LRU_cache/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LRU_cache/LRUcache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="533">
+          <caret line="41" column="9" lean-forward="true" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
             <element signature="e#101#116#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
+            <element signature="e#2679#2680#0" expanded="true" />
+            <element signature="e#2782#2783#0" expanded="true" />
+            <element signature="e#2841#2842#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LRU_cache/CacheClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="286">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
