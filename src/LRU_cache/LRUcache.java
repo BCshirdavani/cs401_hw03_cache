@@ -10,23 +10,28 @@ public class LRUcache {
 	int countTotalGetCalls;
 	int countMiss;
 	int countHit;
+	GetDataStrategy dataSource;
 
 	// TODO: make clear method to clear the cache
 
-	//	constructor with custom capacity
-	public LRUcache(int capacity) {
+	//*****************************************************************************************
+	//	SHOULD I MAKE A CONSTRUCTOR FOR EACH DATA SOURCE TYPE???
+	//	constructor with custom capacity and .txt data source
+	public LRUcache(int capacity, String source) {
 		this.capacity = capacity;
 		this.countHit = 0;
 		this.countMiss = 0;
 		this.countTotalGetCalls = 0;
+		this.dataSource = new TextFileStrategy(source);	//	custom data source, filePathName ?????
 	}
 
-	//	constructor with capacity of 10
+	//	constructor with default capacity of 10, and .txt source
 	public LRUcache() {
 		this.capacity = 10;
 		this.countHit = 0;
 		this.countMiss = 0;
 		this.countTotalGetCalls = 0;
+		this.dataSource = new TextFileStrategy("./src/LRU_cache/FileTest_01.txt");
 	}
 
 	// TODO: make "contains" method for cache, which is like "get", but a boolean
@@ -42,8 +47,15 @@ public class LRUcache {
 		}
 		else{
 			countMiss++;			//	increment countMiss
-			return -1;				//	if not found, return -1
 			//TODO: cacheMiss -> search data source for key:value, and add to cache
+			Object valFromSource = dataSource.getData(key);
+			if(valFromSource != null){
+				set(key, valFromSource);
+				return valFromSource;
+			}
+			else{
+				return -1;				//	if not found, return -1
+			}
 		}
 	}
 

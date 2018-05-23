@@ -38,7 +38,7 @@ public class TextFileStrategy implements GetDataStrategy {
 		}
 		//	if not found
 		if (currentKey != key){
-			return -1;
+			return null;
 		}
 		//	if found
 		else{
