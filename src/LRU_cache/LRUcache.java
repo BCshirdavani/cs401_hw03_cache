@@ -17,12 +17,12 @@ public class LRUcache {
 	//*****************************************************************************************
 	//	SHOULD I MAKE A CONSTRUCTOR FOR EACH DATA SOURCE TYPE???
 	//	constructor with custom capacity and .txt data source
-	public LRUcache(int capacity, String source) {
+	public LRUcache(int capacity, GetDataStrategy source) {
 		this.capacity = capacity;
 		this.countHit = 0;
 		this.countMiss = 0;
 		this.countTotalGetCalls = 0;
-		this.dataSource = new TextFileStrategy(source);	//	custom data source, filePathName ?????
+		this.dataSource = source;	//	custom data source, filePathName ?????
 	}
 
 	//	constructor with default capacity of 10, and .txt source

@@ -3,8 +3,9 @@ package LRU_cache;
 public class CacheClient {
 
 	public static void main(String[] args){
-		LRUcache cache = new LRUcache();
+
 		TextFileStrategy dataFile = new TextFileStrategy("./src/LRU_cache/FileTest_01.txt");
+		LRUcache cache = new LRUcache(10, dataFile);
 
 		int myKey = 4;
 		System.out.println("searching for key: " + myKey);

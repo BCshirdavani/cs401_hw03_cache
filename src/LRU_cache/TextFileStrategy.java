@@ -20,7 +20,6 @@ public class TextFileStrategy implements GetDataStrategy {
 		}
 	}
 
-
 	// 	Find value at KEY
 	//	for a comma separated .txt file
 	@Override
