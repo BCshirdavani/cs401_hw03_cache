@@ -5,9 +5,9 @@ public class CacheClient {
 	public static void main(String[] args){
 
 		TextFileStrategy dataFile = new TextFileStrategy("./src/LRU_cache/FileTest_01.txt");
-		LRUcache cache = new LRUcache(10, dataFile);
+		LRUcache cache = new LRUcache(5, dataFile);
 
-		int myKey = 4;
+		int myKey = 1;
 		System.out.println("searching for key: " + myKey);
 		Object myValue = dataFile.getData(myKey);
 		System.out.println(myValue);
@@ -22,6 +22,24 @@ public class CacheClient {
 		System.out.println("get hit ratio: " + cache.getHitRatio());
 		System.out.println(cache.get(myKey));
 		System.out.println("get hit ratio: " + cache.getHitRatio());
+
+		cache.printMap();
+//		cache.printList();
+		System.out.println(cache.get(2));
+		cache.printMap();
+//		cache.printList();
+		System.out.println(cache.get(3));
+		cache.printMap();
+//		cache.printList();
+		System.out.println(cache.get(4));
+		cache.printMap();
+//		cache.printList();
+		System.out.println(cache.get(5));
+		cache.printMap();
+//		cache.printList();
+//		System.out.println(cache.get(3));
+		cache.printMap();
+//		cache.printList();
 
 	}
 

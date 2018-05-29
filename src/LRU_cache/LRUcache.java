@@ -1,5 +1,6 @@
 package LRU_cache;
 
+import javax.swing.plaf.synth.SynthSliderUI;
 import java.util.HashMap;
 
 public class LRUcache {
@@ -15,8 +16,6 @@ public class LRUcache {
 	// TODO: make clear method to clear the cache
 
 	//*****************************************************************************************
-	//	SHOULD I MAKE A CONSTRUCTOR FOR EACH DATA SOURCE TYPE???
-	//	constructor with custom capacity and .txt data source
 	public LRUcache(int capacity, GetDataStrategy source) {
 		this.capacity = capacity;
 		this.countHit = 0;
@@ -113,6 +112,28 @@ public class LRUcache {
 
 	public Float getMissRatio(){
 		return ((float)countMiss / (float)countTotalGetCalls);
+	}
+
+
+	public void printMap(){
+		System.out.println("KEY\t\tVALUE");
+		for (int key:map.keySet()) {
+			System.out.println(key + "\t\t" + map.get(key).value);
+		}
+	}
+
+	public void printList(){
+		Node here = head;
+		for(int i = 0; i < map.size(); i++){
+			System.out.print(here.key + "\t");
+			here = here.next;
+		}
+		System.out.println();
+		here = head;
+		for(int j = 0; j < map.size(); j++){
+			System.out.print(here.value + "\t");
+			here = here.next;
+		}
 	}
 
 
