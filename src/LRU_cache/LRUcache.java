@@ -53,6 +53,7 @@ public class LRUcache {
 				return valFromSource;
 			}
 			else{
+				System.out.println("cache miss from cache.get(" + key + "), returning -1.");
 				return -1;				//	if not found, return -1
 			}
 		}
@@ -116,6 +117,7 @@ public class LRUcache {
 
 
 	public void printMap(){
+		System.out.println("***MAP***");
 		System.out.println("KEY\t\tVALUE");
 		for (int key:map.keySet()) {
 			System.out.println(key + "\t\t" + map.get(key).value);
@@ -123,6 +125,7 @@ public class LRUcache {
 	}
 
 	public void printList(){
+		System.out.println("***LIST***");
 		Node here = head;
 		for(int i = 0; i < map.size(); i++){
 			System.out.print(here.key + "\t");
@@ -134,6 +137,7 @@ public class LRUcache {
 			System.out.print(here.value + "\t");
 			here = here.next;
 		}
+		System.out.println();
 	}
 
 

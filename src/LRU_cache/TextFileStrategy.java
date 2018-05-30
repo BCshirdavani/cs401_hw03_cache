@@ -24,6 +24,12 @@ public class TextFileStrategy implements GetDataStrategy {
 	//	for a comma separated .txt file
 	@Override
 	public Object getData(int key) {
+		Scanner sc = null;
+		try {
+			sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		int currentKey = -99;
 		String line;
 		String[] lineElements;
@@ -34,15 +40,24 @@ public class TextFileStrategy implements GetDataStrategy {
 			lineElements = line.split(",");
 			currentKey = Integer.parseInt(lineElements[0]);
 			value = lineElements[1];
+			System.out.println("\t\tcKey: " + currentKey + ", value: " + value);
 		}
+		System.out.println("\t\t\texinting scanner loop");
+
+//		sc.remove();
 		//	if not found
 		if (currentKey != key){
+			System.out.println("TextFileStrategy cannot find key " + key);
+//			sc.close();
 			return null;
 		}
 		//	if found
 		else{
+			System.out.println("TextFileStrategy found key.");
+//			sc.close();
 			return value;
 		}
+
 	}
 
 

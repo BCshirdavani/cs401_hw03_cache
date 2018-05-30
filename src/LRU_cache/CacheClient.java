@@ -13,10 +13,8 @@ public class CacheClient {
 		System.out.println(myValue);
 
 		System.out.println(cache.get(myKey));
-		System.out.println("get miss ratio: " + cache.getMissRatio());
 		cache.get(myKey);
-		System.out.println("get miss ratio: " + cache.getMissRatio());
-		cache.set(myKey, myValue);
+//		cache.set(myKey, myValue);
 
 		System.out.println("printing from cache...");
 		System.out.println("get hit ratio: " + cache.getHitRatio());
@@ -24,22 +22,22 @@ public class CacheClient {
 		System.out.println("get hit ratio: " + cache.getHitRatio());
 
 		cache.printMap();
-//		cache.printList();
+		cache.printList();
 		System.out.println(cache.get(2));
 		cache.printMap();
-//		cache.printList();
+		cache.printList();
 		System.out.println(cache.get(3));
 		cache.printMap();
-//		cache.printList();
+		cache.printList();
 		System.out.println(cache.get(4));
 		cache.printMap();
-//		cache.printList();
+		cache.printList();
 		System.out.println(cache.get(5));
 		cache.printMap();
-//		cache.printList();
-//		System.out.println(cache.get(3));
+		cache.printList();
+		System.out.println(cache.get(3));
 		cache.printMap();
-//		cache.printList();
+		cache.printList();
 
 	}
 
