@@ -14,7 +14,7 @@ public class CacheClient {
 
 		System.out.println(cache.get(myKey));
 		cache.get(myKey);
-//		cache.set(myKey, myValue);
+//		cache.put(myKey, myValue);
 
 		System.out.println("printing from cache...");
 		System.out.println("get hit ratio: " + cache.getHitRatio());
@@ -36,6 +36,9 @@ public class CacheClient {
 		cache.printMap();
 		cache.printList();
 		System.out.println(cache.get(3));
+		cache.printMap();
+		cache.printList();
+		System.out.println(cache.get(8));
 		cache.printMap();
 		cache.printList();
 

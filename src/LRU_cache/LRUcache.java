@@ -1,6 +1,5 @@
 package LRU_cache;
 
-import javax.swing.plaf.synth.SynthSliderUI;
 import java.util.HashMap;
 
 public class LRUcache {
@@ -13,9 +12,14 @@ public class LRUcache {
 	int countHit;
 	GetDataStrategy dataSource;
 
-	// TODO: make clear method to clear the cache
+	//	CLEAR
+	public void clear(){
+		map.clear();
+		head.next = null;
+		head = null;
+	}
 
-	//*****************************************************************************************
+	// CONSTRUCTOR
 	public LRUcache(int capacity, GetDataStrategy source) {
 		this.capacity = capacity;
 		this.countHit = 0;
@@ -33,8 +37,13 @@ public class LRUcache {
 		this.dataSource = new TextFileStrategy("./src/LRU_cache/FileTest_01.txt");
 	}
 
-	// TODO: make "contains" method for cache, which is like "get", but a boolean
-	//	RETURN the OBJECT value
+	//	CONTAINS
+	public boolean contains(int key){
+		return map.containsKey(key);
+	}
+
+
+	//	GET the OBJECT value
 	public Object get(int key) {
 		countTotalGetCalls++;		//	increment countTotalGetCalls
 		if(map.containsKey(key)){	//	if found, return object value in node
@@ -46,10 +55,9 @@ public class LRUcache {
 		}
 		else{
 			countMiss++;			//	increment countMiss
-			//TODO: cacheMiss -> search data source for key:value, and add to cache
 			Object valFromSource = dataSource.getData(key);
 			if(valFromSource != null){
-				set(key, valFromSource);
+				put(key, valFromSource);
 				return valFromSource;
 			}
 			else{
@@ -73,8 +81,7 @@ public class LRUcache {
 		}
 	}
 
-	// TODO: remane to "put" method for cache
-	//	set new HEAD
+	//	PUT new HEAD
 	private void setHead(Node n) {
 		n.next = head;		//	old head becomes #2 spot
 		n.pre = null;		//	nothing before new head
@@ -86,8 +93,8 @@ public class LRUcache {
 	}
 
 
-	//	INSERT NEW element
-	public void set(int key, Object value) {
+	//	PUT : put() : INSERT NEW element
+	public void put(int key, Object value) {
 		if(map.containsKey(key)){			//	if key already in cache
 			Node old = map.get(key);
 			old.value = value;				//	overwrite value of existing node for same key
@@ -128,13 +135,7 @@ public class LRUcache {
 		System.out.println("***LIST***");
 		Node here = head;
 		for(int i = 0; i < map.size(); i++){
-			System.out.print(here.key + "\t");
-			here = here.next;
-		}
-		System.out.println();
-		here = head;
-		for(int j = 0; j < map.size(); j++){
-			System.out.print(here.value + "\t");
+			System.out.print(here.key + ":" + here.value + "  -->  ");
 			here = here.next;
 		}
 		System.out.println();
